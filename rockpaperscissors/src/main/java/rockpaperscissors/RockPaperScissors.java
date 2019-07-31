@@ -20,22 +20,11 @@ public class RockPaperScissors {
 	
 	public RockPaperScissors GetResult(int userChoice) {
 		this.userChoice = userChoice;
-		//String resultString = "";
 		GenerateComputerChoice();
 		
 		this.result = Results[this.userChoice][this.computerChoice];
 		
-//		String choicesString = "Computer choose " 
-//		+ Choices.values()[computerChoice] 
-//				+ " and User choose " + Choices.values()[this.userChoice];
-//		if (this.result == "Tie" ) {
-//			resultString = " and we have a tie.";
-//		} else {
-//			resultString = " and the winner is " + this.result;
-//		}
-		
 		return this;
-//		return choicesString + resultString;
 	}
 
 	/**
