@@ -9,6 +9,8 @@ public class RockPaperScissors {
 			{"Computer", "User", "Tie"}
 	};
 	
+	private static final String[] Choices = {"Rock", "Paper", "Scissors"};
+	
 	private int userChoice;
 	private int computerChoice;
 	private String result;
@@ -22,7 +24,15 @@ public class RockPaperScissors {
 		this.userChoice = userChoice;
 		GenerateComputerChoice();
 		
-		this.result = Results[this.userChoice][this.computerChoice];
+		String resAux = Results[this.userChoice][this.computerChoice];
+		
+		if (resAux != "Tie") {
+			resAux += " wins";
+		} 
+		
+		resAux += "!";
+		
+		this.result = resAux;
 		
 		return this;
 	}
@@ -30,15 +40,15 @@ public class RockPaperScissors {
 	/**
 	 * @return the userChoice
 	 */
-	public int getUserChoice() {
-		return userChoice;
+	public String getUserChoice() {
+		return Choices[userChoice];
 	}
 
 	/**
 	 * @return the computerChoice
 	 */
-	public int getComputerChoice() {
-		return computerChoice;
+	public String getComputerChoice() {
+		return Choices[computerChoice];
 	}
 
 	/**
