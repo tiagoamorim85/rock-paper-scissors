@@ -24,7 +24,6 @@ public class MainController {
 			RockPaperScissors result = rps.GetResult(choice);
 			model.addAttribute("result", result);
 			model.addAttribute("computer_choice", result.getComputerChoice());
-			System.out.println(result);
 		}
 		
 		return "index";
