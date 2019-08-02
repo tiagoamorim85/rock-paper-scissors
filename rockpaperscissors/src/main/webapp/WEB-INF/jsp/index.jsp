@@ -4,7 +4,7 @@
 
 <body>
     <center>
-        <h2>Rock Paper Scissors</h2>
+        <h1>Rock Paper Scissors</h1>
 
         <div>
             <form name="myform" method="get" id="form">
@@ -18,7 +18,7 @@
         </div>
         <br>
         <div id="result">
-            <h1>Result</h1>
+            <h2>Result</h2>
             <ul>
                 <p><b>User choice:</b>
                     ${result.userChoice}

@@ -3,6 +3,7 @@ package rockpaperscissors;
 import java.util.Random;
 
 public class RockPaperScissors {
+	// Map of possible results
 	private static final String[][] Results = {
 			{"Tie", "Computer", "User"},
 			{"User", "Tie", "Computer"},
@@ -15,14 +16,16 @@ public class RockPaperScissors {
 	private int computerChoice;
 	private String result;
 	
-	private void GenerateComputerChoice() {
+	// Generate Computer's choice
+	private int GenerateComputerChoice() {
 		Random rand = new Random();
-		this.computerChoice = rand.nextInt(3);
+		return rand.nextInt(3);
 	}
 	
-	public RockPaperScissors GetResult(int userChoice) {
+	// Get the result of the game
+	public RockPaperScissors GetGameResult(int userChoice) {
 		this.userChoice = userChoice;
-		GenerateComputerChoice();
+		this.computerChoice = GenerateComputerChoice();
 		
 		String resAux = Results[this.userChoice][this.computerChoice];
 		
@@ -41,21 +44,21 @@ public class RockPaperScissors {
 	 * @return the userChoice
 	 */
 	public String getUserChoice() {
-		return Choices[userChoice];
+		return Choices[this.userChoice];
 	}
 
 	/**
 	 * @return the computerChoice
 	 */
 	public String getComputerChoice() {
-		return Choices[computerChoice];
+		return Choices[this.computerChoice];
 	}
 
 	/**
 	 * @return the result
 	 */
 	public String getResult() {
-		return result;
+		return this.result;
 	}
 
 }
