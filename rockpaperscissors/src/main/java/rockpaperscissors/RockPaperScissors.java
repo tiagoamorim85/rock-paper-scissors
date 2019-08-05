@@ -2,6 +2,9 @@ package rockpaperscissors;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class RockPaperScissors {
 	// Map of possible results
 	private static final String[][] Results = {

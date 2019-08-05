@@ -2,6 +2,7 @@ package rockpaperscissors.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,8 @@ import rockpaperscissors.RockPaperScissors;
 
 @Controller
 public class MainController {
-	private RockPaperScissors rps = new RockPaperScissors();
+	@Autowired
+	private RockPaperScissors rps;
 	
 	@GetMapping("/")
 	public String home(HttpServletRequest request, ModelMap model) {
