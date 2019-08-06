@@ -13,12 +13,11 @@ public class MainController {
 	private RockPaperScissors rps;
 	
 	@GetMapping("/")
-	public ModelAndView home(String userChoice) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
+	public ModelAndView home(Integer userChoice) {
+		ModelAndView mv = new ModelAndView("index");
 		
 		if (userChoice != null) {
-			RockPaperScissors result = rps.GetGameResult(Integer.parseInt(userChoice));
+			RockPaperScissors result = rps.GetGameResult(userChoice);
 			mv.addObject("result", result);
 		}
 		
