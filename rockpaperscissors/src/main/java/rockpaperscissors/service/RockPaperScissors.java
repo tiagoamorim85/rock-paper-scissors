@@ -1,10 +1,10 @@
-package rockpaperscissors;
+package rockpaperscissors.service;
 
 import java.util.Random;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
-@Controller
+@Service
 public class RockPaperScissors {
 	// Map of possible results
 	private static final String[][] Results = {
