@@ -9,11 +9,11 @@
         <div>
             <form name="myform" method="get" id="form">
 
-                <button form="form" name="button" value="0">Rock</button>
+                <button form="form" name="userChoice" value="0">Rock</button>
 
-                <button form="form" name="button" value="1">Paper</button>
+                <button form="form" name="userChoice" value="1">Paper</button>
 
-                <button form="form" name="button" value="2">Scissors</button>
+                <button form="form" name="userChoice" value="2">Scissors</button>
             </form>
         </div>
         <br>
