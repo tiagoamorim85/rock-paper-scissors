@@ -26,9 +26,13 @@ public class RockPaperScissors {
 	}
 	
 	// Get the result of the game
-	public RockPaperScissors GetGameResult(int userChoice) {
+	public RockPaperScissors GetGameResult(int userChoice) throws Exception {
 		this.userChoice = userChoice;
 		this.computerChoice = GenerateComputerChoice();
+		
+		if (userChoice >= Results.length) {
+			throw new Exception();
+		}
 		
 		String resAux = Results[this.userChoice][this.computerChoice];
 		

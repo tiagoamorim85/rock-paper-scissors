@@ -1,9 +1,15 @@
-<anyxmlelement xmlns:c="http://java.sun.com/jsp/jstl/core" />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 
 <html>
 
 <body>
-    <center>
+	<c:if test="${error}">
+        <script>
+            alert("Please choose a valid value.");        
+        </script>
+    </c:if>
+    <div style="text-align:center">
         <h1>Rock Paper Scissors</h1>
 
         <div>
@@ -31,7 +37,7 @@
                 </p>
             </ul>
         </div>
-    </center>
+    </div>
 </body>
 
 </html>

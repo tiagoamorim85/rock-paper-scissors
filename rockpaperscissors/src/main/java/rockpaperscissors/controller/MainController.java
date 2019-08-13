@@ -17,8 +17,13 @@ public class MainController {
 		ModelAndView mv = new ModelAndView("index");
 		
 		if (userChoice != null) {
-			RockPaperScissors result = rps.GetGameResult(userChoice);
-			mv.addObject("result", result);
+			try {
+				RockPaperScissors result = rps.GetGameResult(userChoice);
+				mv.addObject("result", result);
+				mv.addObject("error", false);
+			} catch (Exception e) {
+				mv.addObject("error", true);
+			}
 		}
 		
 		return mv;
