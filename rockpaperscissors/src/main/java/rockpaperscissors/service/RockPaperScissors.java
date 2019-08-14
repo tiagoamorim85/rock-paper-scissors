@@ -31,7 +31,7 @@ public class RockPaperScissors {
 		this.computerChoice = GenerateComputerChoice();
 		
 		if (userChoice >= Results.length) {
-			throw new Exception();
+			throw new Exception("user choice is not valid");
 		}
 		
 		String resAux = Results[this.userChoice][this.computerChoice];

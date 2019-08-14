@@ -15,12 +15,15 @@ public class MainController {
 	@GetMapping("/")
 	public ModelAndView home(Integer userChoice) {
 		ModelAndView mv = new ModelAndView("index");
+
+		mv.addObject("showResult", false);
 		
 		if (userChoice != null) {
 			try {
 				RockPaperScissors result = rps.GetGameResult(userChoice);
 				mv.addObject("result", result);
 				mv.addObject("error", false);
+				mv.addObject("showResult", true);
 			} catch (Exception e) {
 				mv.addObject("error", true);
 			}
